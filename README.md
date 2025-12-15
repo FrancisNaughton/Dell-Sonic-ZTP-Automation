@@ -25,8 +25,9 @@ Vlan 100 was then put on every access port.
 As for the directories, we followed the ones provided in repository above. 
 
 For pulling the config_db.json files from the production switches, we use the python script called Backup-Sonic-Files.
-Backup-Sonic-Files takes in a CSV with the following fields, connects to each of the switches, and SFTP's the config file into a folder named backup_configdbs with their hostnames attached to the filename. 
-ip	user	pass	hostname	type	building
+Backup-Sonic-Files takes in a CSV with the following fields, connects to each of the switches, and SFTP's the config file into a folder named backup_configdbs with their hostnames attached to the filename.\
+
+ip	user	pass	hostname	type	building\
 
 A second script, Parse-Clean-configs, then parses through each of the config_db.json files and removes 3 fields that will cause conflicts if not removed.
 
