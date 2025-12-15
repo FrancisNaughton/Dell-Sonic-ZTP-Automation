@@ -1,0 +1,25 @@
+{
+    "ztp": {
+      "01-firmware": {
+        "install": {
+          "url": "http://172.24.10.1/sonic-lite-4.4.1.bin"
+        }
+      },
+      "02-configdb-json": {
+        "dynamic-url": {
+          "source": {
+            "prefix": "http://172.24.10.1/running-configs/",
+            "identifier": "service-tag",
+            "suffix": "-config_db.json"
+          },
+          "destination": "/etc/sonic/config_db.json"
+        },
+        "save-config": true
+      },
+      "03-connectivity-check": {
+        "ping-hosts": [
+          "172.24.10.1"
+        ]
+      }
+    }
+  }
